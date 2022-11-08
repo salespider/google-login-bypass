@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 class Main:
-  def __init_(self) -> None:
+  def __init__(self) -> None:
     self.url    = 'https://accounts.google.com/ServiceLogin'
     self.driver = driver = uc.Chrome(use_subprocess=True)
     self.time   = 10
