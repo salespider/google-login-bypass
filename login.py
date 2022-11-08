@@ -10,8 +10,11 @@ class Main:
     self.time   = 10
     
   def login(self, email, password):
-    WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located((By.NAME, 'identifier'))).send_keys(f'{email}\n')
-    WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located((By.NAME, 'password'))).send_keys(f'{password}\n')
+    time.sleep(self.time/2)
+    WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located((By.NAME, 'identifier'))).send_keys(f'{email}'+Keys.RETURN)
+    time.sleep(self.time/2)
+    WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located((By.NAME, 'Passwd'))).send_keys(f'{password}'+Keys.RETURN)
+    time.sleep(self.time/2)
                                                                                 
     self.code()
                                                                                   
